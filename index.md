@@ -1,4 +1,4 @@
-# 👋 About Me
+# About Me
 
 Hi, I’m **Sivasankari** — a self-assured Machine Learning Engineer passionate about crafting impactful AI solutions for real-world problems.
 
@@ -12,7 +12,7 @@ My experience covers the **full machine learning lifecycle**:
 
 ---
 
-## 🚀 Highlights
+## Highlights
 
 - Core Network Engineer @ Nokia (2.5 years)
 - MSc in Data Science and Engineering
@@ -22,7 +22,7 @@ My experience covers the **full machine learning lifecycle**:
 
 ---
 
-## 🔥 Areas of Expertise
+## Areas of Expertise
 
 - **Custom AI Models:** Generative AI (GenAI), Retrieval-Augmented Generation (RAG), Large Language Models (LLMs)
 - **Agentic AI Systems:** Orchestration of AI pipelines and autonomous agents
@@ -32,7 +32,7 @@ My experience covers the **full machine learning lifecycle**:
 
 ---
 
-## 🛠️ Skills
+## Skills
 
 | Skill                      | Proficiency  |
 |----------------------------|:------------:|
@@ -49,13 +49,13 @@ My experience covers the **full machine learning lifecycle**:
 
 ---
 
-## 📫 Contact
+## Contact
 
 - **Email:** [sivasankari.rgn@outlook.com](mailto:sivasankari.rgn@outlook.com)
 
 ---
 
-## 🧠 What I Love
+## What I Love
 
 Innovating at the intersection of data, engineering, and AI.  
 Making complex solutions accessible, scalable, and robust for users and businesses.
