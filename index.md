@@ -1,3 +1,9 @@
+<style>
+  body {
+    background-color: #e6f3ff;
+  }
+</style>
+
 # About Me
 
 Hi, I’m **Sivasankari** — a self-assured Machine Learning Engineer passionate about crafting impactful AI solutions for real-world problems.
