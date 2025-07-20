@@ -9,7 +9,7 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      background: #232e4c; /* Updated: professional, deep blue */
+      background: #232e4c;
       font-family: 'Segoe UI', Arial, sans-serif;
       color: #fff;
     }
@@ -29,7 +29,7 @@
     }
     .sidebar {
       flex: 0 0 350px;
-      background: #232e4c; /* Matched to your example screenshot */
+      background: #232e4c;
       border-radius: 19px;
       box-shadow: 0 6px 32px rgba(0,0,0,0.18);
       padding: 38px 22px 32px 22px;
@@ -44,12 +44,8 @@
     .profile-pic {
       display: block;
       margin: 16px auto 28px auto;
-      width: 130px;
-      height: 130px;
-      border-radius: 0; /* Square image */
       border: 3px solid #fff;
       box-shadow: 0 2px 14px rgba(160,200,255,0.18);
-      object-fit: cover;
       background: #222b40;
     }
     .sidebar h2 {
@@ -232,8 +228,8 @@
   <div class="container">
     <!-- SIDEBAR (LEFT) -->
     <aside class="sidebar">
-      <img src="images/me.jpeg" alt="Sivasankari Rajagurunathan" class="profile-pic">
-      <!-- Tagline removed as requested -->
+      <!-- Your profile photo will appear here in its original shape and size -->
+      <img src="images/me.jpeg" alt="Sivasankari Rajagurunathan" class="profile-pic" style="border-radius:0;">
       <h2>Profile</h2>
       <table>
         <tr><td><b>Name</b></td>     <td>Sivasankari Rajagurunathan</td></tr>
@@ -258,8 +254,6 @@
         <h2>Contact</h2>
         <ul class="contact-list">
           <li>📧 <a href="mailto:sivasankari.rgn@outlook.com">sivasankari.rgn@outlook.com</a></li>
-          <!-- <li>🔗 <a href="https://www.linkedin.com/in/your-link">LinkedIn</a></li> -->
-          <!-- <li>🔗 <a href="https://github.com/Sivasankari199">GitHub</a></li> -->
         </ul>
       </div>
     </aside>
@@ -268,26 +262,16 @@
       <section class="section banner">
         <h1 style="margin-bottom:0.12em;">About Me</h1>
         <p>
-        Hi, I’m <strong>Sivasankari Rajagurunathan</strong> — a self-assured individual and Machine Learning Engineer passionate about developing impactful AI solutions to solve real-world challenges.
+        Hi, I’m <strong>Sivasankari Rajagurunathan</strong> — a self-assured Machine Learning Engineer passionate about developing impactful AI solutions to solve real-world challenges.
         </p>
         <ul class="exp-list">
-          <li>  Recommender engines</li>
-          <li>  Natural language processing</li>
-          <li>  Data-driven automation</li>
+          <li>🛒 Recommender engines</li>
+          <li>📝 Natural language processing</li>
+          <li>📊 Data-driven automation</li>
         </ul>
         <p>
           My expertise covers the full machine learning lifecycle: from data preprocessing and feature engineering to deep learning model development and robust deployment using Streamlit, Flask, and FastAPI.
         </p>
-      </section>
-      <section class="section">
-        <h2>Highlights</h2>
-        <ul class="highlight-list">
-          <li>Core Network Engineer @ Nokia (2.5 years)</li>
-          <li>MSc in Data Science and Engineering</li>
-          <li>Projects: product recommendation, synthetic data simulation, dashboards</li>
-          <li>Cloud-Native & MLOps: AWS (S3, Lambda, SageMaker, EC2, OpenSearch), Docker, CI/CD with MLflow and GitHub Actions</li>
-          <li>Expertise in GenAI, RAG pipelines, LLMs, Autonomous AI workflows</li>
-        </ul>
       </section>
       <section class="section">
         <h2>Areas of Expertise</h2>
@@ -302,7 +286,6 @@
       <section class="projects-section">
         <h2>Featured Projects</h2>
         <div class="project-list">
-          <!-- Project 1 -->
           <div class="project-card">
             <h3><a href="https://github.com/Sivasankari199/Two-Tower-Grocery-Recommender" target="_blank">🛒 Two-Tower Grocery Recommender</a></h3>
             <p>
@@ -311,7 +294,6 @@
             </p>
             <video src="videos/Two_Tower_Grocery_Demo.mp4" controls></video>
           </div>
-          <!-- Project 2 -->
           <div class="project-card">
             <h3><a href="https://github.com/Sivasankari199/flask-langchain-qa" target="_blank">🤖 Flask LangChain QA</a></h3>
             <p>
@@ -320,7 +302,6 @@
             </p>
             <video src="videos/flask_langchain_qa_demo.mp4" controls></video>
           </div>
-          <!-- Project 3 (no screenshot) -->
           <div class="project-card">
             <h3><a href="https://github.com/Sivasankari199/Simulated-Loyalty-Reward-Recommender" target="_blank">🎁 Simulated Loyalty Reward Recommender</a></h3>
             <p>
@@ -328,7 +309,6 @@
               <em>Python, scikit-learn</em>
             </p>
           </div>
-          <!-- Project 4 -->
           <div class="project-card">
             <h3><a href="https://github.com/Sivasankari199/Spotify-Content-based-recommender" target="_blank">🎵 Spotify Content-Based Music Recommender</a></h3>
             <p>
@@ -336,7 +316,6 @@
               <em>Pandas, scikit-learn, Spotify API</em>
             </p>
           </div>
-          <!-- Project 5 -->
           <div class="project-card">
             <h3><a href="https://github.com/Sivasankari199/General-Application-of-Machine-Learning" target="_blank">🛡️ Network Intrusion Detection (ML in Software Engineering)</a></h3>
             <p>
