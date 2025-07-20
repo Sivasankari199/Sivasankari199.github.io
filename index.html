@@ -26,6 +26,48 @@
       tr:nth-child(even) { background: #f4f8fc; }
       th { background: #aacbe2; }
       sub { color: #555; }
+
+      /* Project showcase styling */
+      .projects-section {
+        margin: 40px 0 0 0;
+      }
+      .project-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+      }
+      .project-card {
+        flex: 1 1 320px;
+        background: #fff;
+        padding: 18px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,.06);
+        margin-bottom: 18px;
+        min-width: 280px;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .project-card h3 {
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+      .project-card p {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      .project-card video {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        transition: transform 0.3s;
+      }
+      .project-card video:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 32px rgba(60,130,180,0.13);
+        z-index: 2;
+      }
     </style>
 </head>
 <body>
@@ -77,6 +119,60 @@
         Cloud: AWS S3, EC2, Lambda, SageMaker, OpenSearch, Docker, GitHub Actions, MLflow
       </sub>
     </p>
+
+    <div class="projects-section">
+      <h2>🌟 Featured Projects</h2>
+      <div class="project-list">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h3><a href="https://github.com/Sivasankari199/Two-Tower-Grocery-Recommender" target="_blank">🛒 Two-Tower Grocery Recommender</a></h3>
+          <p>
+            Hybrid deep learning and retrieval system using a two-tower model, FAISS, and LightGBM for personalized grocery recommendations.<br>
+            <em>Keras, FAISS, Streamlit</em>
+          </p>
+          <video src="videos/Two_Tower_Grocery_Demo.mp4" controls
+            style="width:100%; border-radius:10px; margin-bottom:10px; transition: transform 0.3s;"
+            onmouseover="this.style.transform='scale(1.05)';"
+            onmouseout="this.style.transform='scale(1)';"></video>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h3><a href="https://github.com/Sivasankari199/flask-langchain-qa" target="_blank">🤖 Flask LangChain QA</a></h3>
+          <p>
+            Document question-answering API using Flask, LangChain, vector search (Chroma/FAISS), and OpenAI LLMs.<br>
+            <em>Flask, LangChain, OpenAI</em>
+          </p>
+          <video src="videos/flask_langchain_qa_demo.mp4" controls
+            style="width:100%; border-radius:10px; margin-bottom:10px; transition: transform 0.3s;"
+            onmouseover="this.style.transform='scale(1.05)';"
+            onmouseout="this.style.transform='scale(1)';"></video>
+        </div>
+        <!-- Project 3 (no screenshot) -->
+        <div class="project-card">
+          <h3><a href="https://github.com/Sivasankari199/Simulated-Loyalty-Reward-Recommender" target="_blank">🎁 Simulated Loyalty Reward Recommender</a></h3>
+          <p>
+            Rule-based and ML hybrid recommender for loyalty tier management on synthetic data; customer journey simulation included.<br>
+            <em>Python, scikit-learn</em>
+          </p>
+        </div>
+        <!-- Project 4 -->
+        <div class="project-card">
+          <h3><a href="https://github.com/Sivasankari199/Spotify-Content-based-recommender" target="_blank">🎵 Spotify Content-Based Music Recommender</a></h3>
+          <p>
+            Music recommendation via audio feature similarity and metadata for playlist expansion.<br>
+            <em>Pandas, scikit-learn, Spotify API</em>
+          </p>
+        </div>
+        <!-- Project 5 -->
+        <div class="project-card">
+          <h3><a href="https://github.com/Sivasankari199/General-Application-of-Machine-Learning" target="_blank">🛡️ Network Intrusion Detection (ML in Software Engineering)</a></h3>
+          <p>
+            Application of classical ML models for automatic network intrusion detection—illustrating ML in real-world software engineering.<br>
+            <em>Python, scikit-learn</em>
+          </p>
+        </div>
+      </div>
+    </div>
 
     <h2> Contact</h2>
     <ul>
