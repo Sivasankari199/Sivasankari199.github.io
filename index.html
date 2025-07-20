@@ -1,187 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About Me | Sivasankari Rajagurunathan</title>
-    <style>
-      body {
-        background-color: #e6f3ff;
-        font-family: 'Segoe UI', Arial, sans-serif;
-        margin: 0;
-        padding: 0 10vw 40px 10vw;
-      }
-      h1, h2 { color: #2c3e50; }
-      ul { padding-left: 20px; }
-      table {
-        margin: 20px 0;
-        border-collapse: collapse;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.03);
-      }
-      td, th {
-        padding: 10px 18px;
-        text-align: left;
-      }
-      tr:nth-child(even) { background: #f4f8fc; }
-      th { background: #aacbe2; }
-      sub { color: #555; }
+  <meta charset="UTF-8">
+  <title>Sivasankari Rajagurunathan | ML Engineer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #e6f3ff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #2c3e50;
+    }
+    .container {
+      display: flex;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 36px auto 0 auto;
+      min-height: 90vh;
+      padding: 30px 24px 48px 24px;
+      box-sizing: border-box;
+      background: #fafcff;
+      border-radius: 18px;
+      box-shadow: 0 8px 36px rgba(60,130,180,0.12);
+    }
 
-      /* Project showcase styling */
-      .projects-section {
-        margin: 40px 0 0 0;
-      }
-      .project-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 28px;
-      }
-      .project-card {
-        flex: 1 1 320px;
-        background: #fff;
-        padding: 18px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,.06);
-        margin-bottom: 18px;
-        min-width: 280px;
-        max-width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-      }
-      .project-card h3 {
-        margin-top: 0;
-        margin-bottom: 8px;
-      }
-      .project-card p {
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
-      .project-card video {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        transition: transform 0.3s;
-      }
-      .project-card video:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 32px rgba(60,130,180,0.13);
-        z-index: 2;
-      }
-    </style>
+    .sidebar {
+      flex: 0 0 320px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(60,130,180,0.10);
+      padding: 34px 22px 28px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      min-width: 230px;
+      max-width: 340px;
+    }
+    .sidebar h2 {
+      border-left: 8px solid #4682B4;
+      background: #f5f8fd;
+      padding: 6px 15px;
+      border-radius: 8px;
+      font-size: 1.18em;
+      margin-top: 0;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+    .sidebar table {
+      width: 100%;
+      font-size: 0.97em;
+      margin-bottom: 8px;
+      border-radius: 9px;
+      border: none;
+      background: transparent;
+      box-shadow: none;
+    }
+    .sidebar td {
+      padding: 4px 0 4px 0;
+      border: none;
+      vertical-align: top;
+    }
+    .skill-pill {
+      display: inline-block;
+      background: #d7eaf8;
+      color: #15508f;
+      font-size: .96em;
+      border-radius: 13px;
+      padding: 5px 14px;
+      margin: 3px 3px 3px 0;
+      font-weight: 500;
+    }
+    .progress-bar-wrap {
+      background: #e6f3ff;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      width: 100%;
+      height: 17px;
+    }
+    .progress-bar {
+      height: 100%;
+      border-radius: 8px 0 0 8px;
+      background: linear-gradient(90deg, #aacbe2 60%, #4682B4 100%);
+      color: #003355;
+      text-align: right;
+      font-size: 0.95em;
+      padding-right: 7px;
+      line-height: 17px;
+      font-weight: 600;
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .contact-list li {
+      margin-bottom: 9px;
+      font-size: 1em;
+    }
+    .main-content {
+      flex: 1 1 0px;
+      min-width: 0;
+      padding: 5px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .section {
+      margin-bottom: 10px;
+    }
+    .section h1, .section h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .section h1 {
+      font-size: 2.1em;
+      letter-spacing: 0.018em;
+    }
+    .banner {
+      background: linear-gradient(90deg,#b4cbe4 18%, #fafbfc 100%);
+      border-radius: 14px;
+      padding: 19px 22px 18px 22px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 10px rgba(90,130,180,0.07);
+      font-size: 1.16em;
+    }
+    .exp-list, .highlight-list {
+      padding-left: 22px;
+      margin-top: 6px;
+      margin-bottom: 10px;
+    }
+    .projects-section h2 {
+      border-left: 8px solid #4682B4;
+      background: #f5f8fd;
+      padding:8px 18px;
+      border-radius:8px;
+      font-size: 1.22em;
+      margin-bottom: 20px;
+    }
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-bottom: 8px;
+    }
+    .project-card {
+      flex: 1 1 350px;
+      min-width: 270px;
+      max-width: 390px;
+      background: linear-gradient(135deg, #fff 70%, #b2cee9 120%);
+      border-radius: 13px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 20px 20px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: box-shadow 0.22s, transform 0.23s;
+      border: 1.5px solid #dde6f0;
+    }
+    .project-card:hover {
+      box-shadow: 0 8px 30px rgba(60,130,180,0.14);
+      transform: translateY(-5px) scale(1.018);
+      border-color: #4682B4;
+    }
+    .project-card h3 {
+      margin: 0 0 7px 0;
+      font-size: 1.13em;
+      letter-spacing: 0.01em;
+    }
+    .project-card a { text-decoration: none; color: #15508F; }
+    .project-card p {
+      margin: 6px 0 8px 0;
+      font-size: 1em;
+    }
+    .project-card video {
+      width: 100%;
+      border-radius: 10px;
+      margin: 6px 0 12px 0;
+      background: #fafcff;
+      box-shadow: 0 1px 8px rgba(60,130,180,0.15);
+      transition: transform 0.3s;
+    }
+    .project-card video:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 32px rgba(60,130,180,0.17);
+      z-index: 2;
+    }
+    @media (max-width: 900px) {
+      .container { flex-direction: column; gap:16px; padding:10px 2.2vw 30px 2.2vw;}
+      .sidebar { margin-bottom: 30px; max-width:100%;}
+      .main-content { padding:0; }
+      .project-list { flex-direction: column; gap:22px;}
+    }
+  </style>
 </head>
 <body>
-    <h1> About Me</h1>
-    <p>
-      Hi, I’m <strong>Sivasankari Rajagurunathan</strong> — a self-assured Machine Learning Engineer driven by a passion for developing impactful AI solutions to solve real-world challenges.
-    </p>
-    <ul>
-      <li>🛒 Recommender engines</li>
-      <li>📝 Natural language processing</li>
-      <li>📊 Data-driven automation</li>
-    </ul>
-    <p>
-      My expertise spans the complete machine learning lifecycle: from data preprocessing and feature engineering to deep learning model development and robust deployment using frameworks like Streamlit, Flask, and FastAPI.
-    </p>
+  <div class="container">
+    <!-- SIDEBAR (LEFT) -->
+    <aside class="sidebar">
 
-    <h2> Highlights</h2>
-    <ul>
-      <li>Core Network Engineer @ Nokia (2.5 years)</li>
-      <li>MSc in Data Science and Engineering</li>
-      <li>Projects: product recommendation, synthetic data simulation, dashboards</li>
-      <li>Cloud-Native & MLOps: AWS (S3, Lambda, SageMaker, EC2, OpenSearch), Docker, CI/CD with MLflow and GitHub Actions</li>
-      <li>Expertise in GenAI, RAG pipelines, LLMs, Autonomous AI workflows</li>
-    </ul>
+      <h2>Profile</h2>
+      <table>
+        <tr><td><b>Name</b></td>     <td>Sivasankari Rajagurunathan</td></tr>
+        <tr><td><b>Title</b></td>    <td>Machine Learning Engineer</td></tr>
+        <tr><td><b>Birthday</b></td> <td>19.08.1998</td></tr>
+        <tr><td><b>Degree</b></td>   <td>MSc, Data Science & Eng.</td></tr>
+        <tr><td><b>Experience</b></td> <td>2.5 yrs @ Nokia</td></tr>
+      </table>
 
-    <h2> Areas of Expertise</h2>
-    <ul>
-      <li>Custom AI Models, GenAI, RAG, LLMs</li>
-      <li>Agentic AI Systems & Orchestrated Pipelines</li>
-      <li>Cloud Integrations (AWS suite, OpenSearch)</li>
-      <li>CI/CD and scalable ML project deployments</li>
-      <li>Enterprise app rollout: reliable, secure, robust</li>
-    </ul>
-
-    <h2> Skills</h2>
-    <table>
-      <tr><th>Skill</th><th>Proficiency</th></tr>
-      <tr><td>Python</td><td>95%</td></tr>
-      <tr><td>Machine Learning / AI</td><td>95%</td></tr>
-      <tr><td>GenAI, LLMs, RAG</td><td>90%</td></tr>
-      <tr><td>NLP</td><td>90%</td></tr>
-      <tr><td>RESTful APIs</td><td>85%</td></tr>
-      <tr><td>Recommender Systems</td><td>90%</td></tr>
-      <tr><td>Cloud & MLOps</td><td>80%</td></tr>
-      <tr><td>CI/CD Pipelines</td><td>80%</td></tr>
-    </table>
-    <p>
-      <sub>
-        Cloud: AWS S3, EC2, Lambda, SageMaker, OpenSearch, Docker, GitHub Actions, MLflow
-      </sub>
-    </p>
-
-    <div class="projects-section">
-      <h2>🌟 Featured Projects</h2>
-      <div class="project-list">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <h3><a href="https://github.com/Sivasankari199/Two-Tower-Grocery-Recommender" target="_blank">🛒 Two-Tower Grocery Recommender</a></h3>
-          <p>
-            Hybrid deep learning and retrieval system using a two-tower model, FAISS, and LightGBM for personalized grocery recommendations.<br>
-            <em>Keras, FAISS, Streamlit</em>
-          </p>
-          <video src="videos/Two_Tower_Grocery_Demo.mp4" controls
-            style="width:100%; border-radius:10px; margin-bottom:10px; transition: transform 0.3s;"
-            onmouseover="this.style.transform='scale(1.05)';"
-            onmouseout="this.style.transform='scale(1)';"></video>
-        </div>
-        <!-- Project 2 -->
-        <div class="project-card">
-          <h3><a href="https://github.com/Sivasankari199/flask-langchain-qa" target="_blank">🤖 Flask LangChain QA</a></h3>
-          <p>
-            Document question-answering API using Flask, LangChain, vector search (Chroma/FAISS), and OpenAI LLMs.<br>
-            <em>Flask, LangChain, OpenAI</em>
-          </p>
-          <video src="videos/flask_langchain_qa_demo.mp4" controls
-            style="width:100%; border-radius:10px; margin-bottom:10px; transition: transform 0.3s;"
-            onmouseover="this.style.transform='scale(1.05)';"
-            onmouseout="this.style.transform='scale(1)';"></video>
-        </div>
-        <!-- Project 3 (no screenshot) -->
-        <div class="project-card">
-          <h3><a href="https://github.com/Sivasankari199/Simulated-Loyalty-Reward-Recommender" target="_blank">🎁 Simulated Loyalty Reward Recommender</a></h3>
-          <p>
-            Rule-based and ML hybrid recommender for loyalty tier management on synthetic data; customer journey simulation included.<br>
-            <em>Python, scikit-learn</em>
-          </p>
-        </div>
-        <!-- Project 4 -->
-        <div class="project-card">
-          <h3><a href="https://github.com/Sivasankari199/Spotify-Content-based-recommender" target="_blank">🎵 Spotify Content-Based Music Recommender</a></h3>
-          <p>
-            Music recommendation via audio feature similarity and metadata for playlist expansion.<br>
-            <em>Pandas, scikit-learn, Spotify API</em>
-          </p>
-        </div>
-        <!-- Project 5 -->
-        <div class="project-card">
-          <h3><a href="https://github.com/Sivasankari199/General-Application-of-Machine-Learning" target="_blank">🛡️ Network Intrusion Detection (ML in Software Engineering)</a></h3>
-          <p>
-            Application of classical ML models for automatic network intrusion detection—illustrating ML in real-world software engineering.<br>
-            <em>Python, scikit-learn</em>
-          </p>
-        </div>
+      <div>
+        <h2>Skills</h2>
+        <div class="progress-bar-wrap"><div class="progress-bar" style="width:95%;">Python 95%</div></div>
+        <div class="progress-bar-wrap"><div class="progress-bar" style="width:95%; background:linear-gradient(90deg,#aacbe2 60%,#3a9f6e 100%);">ML / AI 95%</div></div>
+        <div class="progress-bar-wrap"><div class="progress-bar" style="width:90%; background:linear-gradient(90deg,#aacbe2 70%,#ff9933 100%);">GenAI, LLMs, RAG 90%</div></div>
+        <div class="progress-bar-wrap"><div class="progress-bar" style="width:90%; background:linear-gradient(90deg,#aacbe2 70%,#462f77 100%);">NLP 90%</div></div>
+        <div class="progress-bar-wrap"><div class="progress-bar" style="width:85%;">RESTful APIs 85%</div></div>
+        <div class="progress-bar-wrap"><div class="progress-bar" style="width:90%; background:linear-gradient(90deg,#aacbe2 80%,#1db954 100%);">Recommender Systems 90%</div></div>
+        <div class="progress-bar-wrap"><div class="progress-bar" style="width:80%; background:linear-gradient(90deg,#aacbe2 70%,#014a74 90%);">Cloud & MLOps 80%</div></div>
+        <div class="progress-bar-wrap"><div class="progress-bar" style="width:80%; background:linear-gradient(90deg,#aacbe2 70%,#e67e22 90%);">CI/CD Pipelines 80%</div></div>
+        <sub>Cloud: AWS S3, EC2, Lambda, SageMaker, OpenSearch, Docker, GitHub Actions, MLflow</sub>
       </div>
-    </div>
 
-    <h2> Contact</h2>
-    <ul>
-      <li>Email: <a href="mailto:sivasankari.rgn@outlook.com">sivasankari.rgn@outlook.com</a></li>
-    </ul>
+      <div>
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>📧 <a href="mailto:sivasankari.rgn@outlook.com">sivasankari.rgn@outlook.com</a></li>
+          <!-- <li>🔗 <a href="https://www.linkedin.com/in/your-link">LinkedIn</a></li> -->
+          <!-- <li>🔗 <a href="https://github.com/Sivasankari199">GitHub</a></li> -->
+        </ul>
+      </div>
 
-    <h2> What I Love</h2>
-    <p>
-      I thrive at the intersection of data, engineering, and AI — turning complex problems into accessible, scalable, and meaningful solutions for users and businesses. If you are interested in collaboration or building intelligent applications, let’s connect!
-    </p>
+    </aside>
+
+    <!-- MAIN CONTENT (RIGHT) -->
+    <main class="main-content">
+
+      <section class="section banner">
+        <h1 style="margin-bottom:0.12em;">👋 About Me</h1>
+        <p>
+        Hi, I’m <strong>Sivasankari Rajagurunathan</strong> — a self-assured Machine Learning Engineer passionate about developing impactful AI solutions to solve real-world challenges.
+        </p>
+        <ul class="exp-list">
+          <li>🛒 Recommender engines</li>
+          <li>📝 Natural language processing</li>
+          <li>📊 Data-driven automation</li>
+        </ul>
+        <p>
+          My expertise covers the full machine learning lifecycle: from data preprocessing and feature engineering to deep learning model development and robust deployment using Streamlit, Flask, and FastAPI.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>🚀 Highlights</h2>
+        <ul class="highlight-list">
+          <li>Core Network Engineer @ Nokia (2.5 years)</li>
+          <li>MSc in Data Science and Engineering</li>
+          <li>Projects: product recommendation, synthetic data simulation, dashboards</li>
+          <li>Cloud-Native & MLOps: AWS (S3, Lambda, SageMaker, EC2, OpenSearch), Docker, CI/CD with MLflow and GitHub Actions</li>
+          <li>Expertise in GenAI, RAG pipelines, LLMs, Autonomous AI workflows</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>🔥 Areas of Expertise</h2>
+        <ul class="exp-list">
+          <li>Custom AI Models, GenAI, RAG, LLMs</li>
+          <li>Agentic AI Systems & Orchestrated Pipelines</li>
+          <li>Cloud Integrations (AWS suite, OpenSearch)</li>
+          <li>CI/CD and scalable ML project deployments</li>
+          <li>Enterprise app rollout: reliable, secure, robust</li>
+        </ul>
+      </section>
+
+      <section class="projects-section">
+        <h2>🌟 Featured Projects</h2>
+        <div class="project-list">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <h3><a href="https://github.com/Sivasankari199/Two-Tower-Grocery-Recommender" target="_blank">🛒 Two-Tower Grocery Recommender</a></h3>
+            <p>
+              Hybrid deep learning and retrieval system using a two-tower model, FAISS, and LightGBM for personalized grocery recommendations.<br>
+              <em>Keras, FAISS, Streamlit</em>
+            </p>
+            <video src="videos/Two_Tower_Grocery_Demo.mp4" controls></video>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <h3><a href="https://github.com/Sivasankari199/flask-langchain-qa" target="_blank">🤖 Flask LangChain QA</a></h3>
+            <p>
+              Document question-answering API using Flask, LangChain, vector search (Chroma/FAISS), and OpenAI LLMs.<br>
+              <em>Flask, LangChain, OpenAI</em>
+            </p>
+            <video src="videos/flask_langchain_qa_demo.mp4" controls></video>
+          </div>
+          <!-- Project 3 (no screenshot) -->
+          <div class="project-card">
+            <h3><a href="https://github.com/Sivasankari199/Simulated-Loyalty-Reward-Recommender" target="_blank">🎁 Simulated Loyalty Reward Recommender</a></h3>
+            <p>
+              Rule-based and ML hybrid recommender for loyalty tier management on synthetic data; customer journey simulation included.<br>
+              <em>Python, scikit-learn</em>
+            </p>
+          </div>
+          <!-- Project 4 -->
+          <div class="project-card">
+            <h3><a href="https://github.com/Sivasankari199/Spotify-Content-based-recommender" target="_blank">🎵 Spotify Content-Based Music Recommender</a></h3>
+            <p>
+              Music recommendation via audio feature similarity and metadata for playlist expansion.<br>
+              <em>Pandas, scikit-learn, Spotify API</em>
+            </p>
+          </div>
+          <!-- Project 5 -->
+          <div class="project-card">
+            <h3><a href="https://github.com/Sivasankari199/General-Application-of-Machine-Learning" target="_blank">🛡️ Network Intrusion Detection (ML in Software Engineering)</a></h3>
+            <p>
+              Application of classical ML models for automatic network intrusion detection—illustrating ML in real-world software engineering.<br>
+              <em>Python, scikit-learn</em>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>🧠 What I Love</h2>
+        <p>
+          I thrive at the intersection of data, engineering, and AI—turning complex problems into accessible, scalable, and meaningful solutions. <br>
+          <b>If you’re interested in collaboration or building intelligent applications, let’s connect!</b>
+        </p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
