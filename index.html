@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sivasankari Rajagurunathan | ML Engineer </title>
+  <title>Sivasankari Rajagurunathan | ML Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     html, body {
@@ -44,6 +44,10 @@
     .profile-pic {
       display: block;
       margin: 16px auto 28px auto;
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 0;
       border: 3px solid #fff;
       box-shadow: 0 2px 14px rgba(160,200,255,0.18);
       background: #222b40;
@@ -98,7 +102,7 @@
     .progress-ml { width:95%; background:linear-gradient(90deg,#2556a5 60%,#3a9f6e 100%);}
     .progress-genai { width:90%; background:linear-gradient(90deg,#2556a5 65%,#ff9933 100%);}
     .progress-nlp { width:90%; background:linear-gradient(90deg,#2556a5 65%,#8779c6 100%);}
-    .progress-rest { width:85%;}
+    .progress-rest { width:85%; }
     .progress-rec { width:90%; background:linear-gradient(90deg,#2556a5 80%,#1db954 100%);}
     .progress-cloud { width:80%; background:linear-gradient(90deg,#2556a5 78%,#72c6e1 100%);}
     .progress-cicd { width:80%; background:linear-gradient(90deg,#2556a5 75%,#fed083 100%);}
@@ -228,8 +232,9 @@
   <div class="container">
     <!-- SIDEBAR (LEFT) -->
     <aside class="sidebar">
-      <!-- Your profile photo will appear here in its original shape and size -->
-      <img src="images/me.jpeg" alt="Sivasankari Rajagurunathan" class="profile-pic" style="border-radius:0;">
+      <!-- Profile photo auto-scales, square fit -->
+      <img src="images/me.jpeg" alt="Sivasankari Rajagurunathan"
+           class="profile-pic" style="width:130px; height:130px; object-fit:cover; border-radius:0;">
       <h2>Profile</h2>
       <table>
         <tr><td><b>Name</b></td>     <td>Sivasankari Rajagurunathan</td></tr>
